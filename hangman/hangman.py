@@ -191,13 +191,11 @@ def start_playing(name, words):
 
 def main():
 
-    """the argument to be entered is a tab separated file, which in my case is
-    animal_list.txt
-    """
-
+    # The required command-line argument for execution is animal_list.txt, the filename.
     if len(sys.argv) != 2:
         print('File name not entered!')
         sys.exit(1)
+
     words = get_animals_list(sys.argv[1])
     name = welcome()
     start_playing(name, words)
